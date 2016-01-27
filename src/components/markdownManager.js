@@ -7,33 +7,62 @@ class markdownManager extends Component {
         super();
         this.state = {
             markdown: 
-`Heading
-=======
+`GitHub Flavored Markdown
+========================
 
-Sub-heading
+#### Brought to you by [CodeMirror](https://codemirror.net/) and [React-CodeMirror](https://github.com/JedWatson/react-codemirror)
+
+An extension of [markdown](https://en.wikipedia.org/wiki/Markdown)
 -----------
- 
-### Another deeper heading
- 
-Paragraphs are separated
-by a blank line.
 
-Leave 2 spaces at the end of a line to do a  
-line break
+Underscores_are_allowed_between_words.
 
-Text attributes *italic*, **bold**, 
-\`monospace\`, ~~strikethrough~~ .
+| First Header  | Second Header |
+| :-------------: | :-------------: |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 
-Shopping list:
 
-  * apples
-  * oranges
-  * pears`
+~~Strikethrough text~~
+~~**That works with 
+other formatting and spans
+across lines**~~
+
+### Fenced code blocks (and syntax highlighting)
+
+\`\`\`javascript
+class FunComponent extends React.Component {
+    render() {
+        //make folks happy
+    }
+}
+\`\`\`
+
+## Task Lists won't render here, but
+## syntax highlighting works in the editor
+
+- [ ] Incomplete task list item
+- [x] **Completed** task list item
+
+## A bit of GitHub spice
+
+* SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* User@SHA ref: mojombo@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* User/Project@SHA: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+* \#Num: #1
+* User/#Num: mojombo#1
+* User/Project#Num: mojombo/god#1
+
+>I love scotch
+
+See http://github.github.com/github-flavored-markdown/.
+
+
+`
         }
     }
 
-    setMarkdownState = function(event) {
-        let newMarkdown = event.target.value;
+    setMarkdownState = function(newMarkdown) {
         this.setState({
             markdown: newMarkdown
         });
@@ -43,7 +72,7 @@ Shopping list:
         return (
             <form className="form-inline">
                 <InputBox onChange={this.setMarkdownState.bind(this)} value={this.state.markdown} />
-                <OutputBox onChange={this.setMarkdownState.bind(this)} value={this.state.markdown} />
+                <OutputBox value={this.state.markdown} />
             </form>
         );
     }

@@ -2,10 +2,25 @@ div.form-group {
     width: 50%;
     height: 95vh;
     padding: 20px;
-    
-    textarea, .output {
+
+    .CodeMirror, .output {
         width: 100%;
-        min-height: 75%;
         font-size: 1.6em;
+        border: 1px solid black;
     }
+
+    .CodeMirror {
+        height: 75vh;
+    }
+
+    .output {
+        height: 75vh;
+        overflow: scroll;
+        padding: 7px;
+    }
+}
+
+.navbar-nav {
+    padding: 0 15px;
+    font-size: 1.3em;
 }
