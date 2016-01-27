@@ -1,0 +1,11 @@
+div.form-group {
+    width: 50%;
+    height: 95vh;
+    padding: 20px;
+    
+    textarea, .output {
+        width: 100%;
+        min-height: 75%;
+        font-size: 1.6em;
+    }
+}
