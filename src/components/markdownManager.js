@@ -6,11 +6,11 @@ class markdownManager extends Component {
     constructor() {
         super();
         this.state = {
-            markdown: 
+            markdown:
 `GitHub Flavored Markdown
 ========================
 
-#### Brought to you by [CodeMirror](https://codemirror.net/) and [React-CodeMirror](https://github.com/JedWatson/react-codemirror)
+#### Brought to you by [CodeMirror](https://codemirror.net/), [React-CodeMirror](https://github.com/JedWatson/react-codemirror), and [Marked](https://github.com/chjj/marked)
 
 An extension of [markdown](https://en.wikipedia.org/wiki/Markdown)
 -----------
@@ -18,7 +18,7 @@ An extension of [markdown](https://en.wikipedia.org/wiki/Markdown)
 Underscores_are_allowed_between_words.
 
 ~~Strikethrough text~~
-~~**That works with 
+~~**That works with
 other formatting and spans
 across lines**~~
 
@@ -36,7 +36,7 @@ class FunComponent extends React.Component {
 }
 \`\`\`
 
-## GitHub specific markup 
+## GitHub specific markup
 
 - [ ] Incomplete task list item
 - [x] **Completed** task list item
